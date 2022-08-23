@@ -1,4 +1,4 @@
-import { Item, Inner, Container, Title, SubTitle } from "./styles/jumbotron";
+import { Item, Inner, Container, Title, SubTitle, Image } from "./styles/jumbotron";
 
 export default function Jumbotron({
   children,
@@ -22,4 +22,8 @@ Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
 
 Jumbotron.SubTitle = function JumbotronSubtitle({ children, ...restProps }) {
   return <SubTitle {...restProps}>{children}</SubTitle>;
+};
+
+Jumbotron.Image = function JumbotronImage({ children, ...restProps }) {
+  return <Image {...restProps} />;
 };
