@@ -11,6 +11,8 @@ export default function JumbotronContainer() {
           <Jumbotron.SubTitle>{subtitle}</Jumbotron.SubTitle>
           <Jumbotron.Image src={image} alt={alt} />
         </Jumbotron>
+        // console.log(image)
+        // <Jumbotron.Image src={image} alt={alt} />
       ))}
     </Jumbotron.Container>
   );
