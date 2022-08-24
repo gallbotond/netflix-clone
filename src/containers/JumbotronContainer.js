@@ -5,12 +5,11 @@ import jumboData from "../fixtures/jumbo.json";
 export default function JumbotronContainer() {
   return (
     <Jumbotron.Container>
-      {jumboData.map(({ title, subtitle, image, alt }) => (
-        <Jumbotron>
+      {jumboData.map(({ title, subtitle, image, alt }, index) => (
+        <Jumbotron key={index}>
           <Jumbotron.Title>{title}</Jumbotron.Title>
           <Jumbotron.SubTitle>{subtitle}</Jumbotron.SubTitle>
-          <Jumbotron.Image src={"../../images/misc/home-tv.jpg"} alt={alt} />
-          <img src="../../../images/misc/home-tv.jpg"></img>
+          <Jumbotron.Image src={image} alt={alt} />
         </Jumbotron>
       ))}
     </Jumbotron.Container>
