@@ -3,7 +3,7 @@
     "10": 1,
     "title": "Enjoy on your TV.",
     "subtitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
-    "image": "../images/misc/home-bg.jpg",
+    "image": "../images/misc/home-tv.jpg",
     "alt": "Tiger King on Netflix",
     "direction": "row"
   },
@@ -13,7 +13,8 @@
     "subtitle": "Save your data and watch all your favorites offline.",
     "image": "../images/misc/home-mobile.jpg",
     "alt": "Alice in wonderland",
-    "direction": "row-reverse"
+    "direction": "row-reverse",
+    "order": -1
   },
   {
     "10": 3,
