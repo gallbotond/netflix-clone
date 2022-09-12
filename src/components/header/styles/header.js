@@ -5,8 +5,8 @@ export const Background = styled.section`
   display: flex;
   flex-direction: column;
   background: url(${({ src }) =>
-      src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
-    top-left / cover no-repeat;
+      src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+    top left / cover no-repeat;
 
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
@@ -35,7 +35,7 @@ export const Link = styled.p`
   colof: #fff;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({active}) => (active === 'true' ? '700' : 'normal')};
+  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
   cursor: pointer;
 
   &:hover {
