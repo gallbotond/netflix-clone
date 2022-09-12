@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: black;
     color: #333333;
     font-size: 16px;
+    font-weight: 700;
     margin: 0;
   }
 `;

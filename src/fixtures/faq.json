@@ -2,7 +2,9 @@
   {
     "id": 1,
     "header": "What is Netflix?",
-    "body": "Netflix is a streaming service that offers a wide variety of award-winning TV programmes, films, anime, documentaries and more - on thousands of internet-connected devices. In nYou can watch as much as you want, whenever you want, without a single advert - aly for one low monthly price. There's always something new to discover, and new TV programmes and films are added every week!",
+    "body": "Netflix is a streaming service that offers a wide variety of award-winning TV programmes, films, anime, documentaries and more - on thousands of internet-connected devices. In nYou can watch as much as you want, whenever you want, without a single advert - aly for one low monthly price. There's always something new to discover, and new TV programmes and films are added every week!"
+  },
+  {
     "id": 2,
     "header": "How much does Netflix cost?",
     "body": "Watch Netflix on your smartphone, tablet, smart TV, laptop or streaming device, all for one low fixed monthly fee. Plans start from £5.99 a month. No extra costs or contracts."
@@ -10,7 +12,7 @@
   {
     "id": 3,
     "header": "Where can I watch?",
-    "body": "Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any Internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. In\nYou can also download your favourite programmes with the 10s, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere."
+    "body": "Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any Internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. In\nYou can also download your favorite programmes with the 10s, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere."
   },
   {
     "id": 4,

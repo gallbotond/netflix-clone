@@ -1,6 +1,6 @@
 [
   {
-    "10": 1,
+    "id": 1,
     "title": "Enjoy on your TV.",
     "subtitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
     "image": "../images/misc/home-tv.jpg",
@@ -17,7 +17,7 @@
     "order": -1
   },
   {
-    "10": 3,
+    "id": 3,
     "title": "Watch everywhere.",
     "subtitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
     "image": "../images/misc/home-imac.jpg",
