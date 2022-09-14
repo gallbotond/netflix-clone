@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 660px;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -80,14 +80,13 @@ export const Submit = styled.button`
   border-radius: 4px;
   font-size: 16px;
   font-weight: bold;
-  margin: 24px 0 12px;
+  margin: 0 0 12px;
   padding: 16px;
   border: 0;
   color: white;
   cursor: pointer;
 
   &:disabled {
-    opacity: .5;
+    opacity: 0.5;
   }
 `;
-
