@@ -4,25 +4,31 @@ import { Form } from "../components";
 import FooterContainer from "../containers/FooterContainer";
 import HeaderContainer from "../containers/HeaderContainer";
 
-export default function SignIn() {
-  const [error, setError] = useState("");
+export default function SignUp() {
+  const [firstName, setFirstName] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const isInvalid = (password === "") | (emailAddress === "");
+  const isInvalid = firstName === "" || password === "" || emailAddress === "";
 
-  const handleSignIn = (event) => {
-    event.preventDefault();
+  const handleSignUp = (e) => {
+    e.preventDefault();
   };
 
   return (
     <>
       <HeaderContainer>
         <Form>
-          <Form.Title>Sign In</Form.Title>
+          <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
-
-          <Form.Base onSubmit={handleSignIn} method="POST">
+          <Form.Base>
+            <Form.Input
+              placeholder="First Name"
+              autoComplete="name"
+              value={firstName}
+              onChange={({ target }) => setFirstName(target.value)}
+            />
             <Form.Input
               placeholder="Email Address"
               autoComplete="email"
@@ -31,16 +37,16 @@ export default function SignIn() {
             />
             <Form.Input
               type="password"
-              autoComplete="current-password"
-              placeholder="Password"
+              autoComplete="new-password"
               value={password}
+              placeholder="Password"
               onChange={({ target }) => setPassword(target.value)}
             />
             <Form.Submit disabled={isInvalid} type="submit">
-              Sign In
+              Sign Up
             </Form.Submit>
             <Form.Text>
-              New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+              Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
             </Form.Text>
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA
