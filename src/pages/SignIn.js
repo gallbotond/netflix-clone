@@ -6,6 +6,7 @@ import HeaderContainer from "../containers/HeaderContainer";
 import * as ROUTES from "../constants/routes";
 import { FirebaseContext } from "../context/firebase";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
   const [error, setError] = useState("");
@@ -13,8 +14,8 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
 
   const isInvalid = (password === "") | (emailAddress === "");
-
   const { firebase } = useContext(FirebaseContext);
+  const navigate = useNavigate();
 
   const handleSignIn = (event) => {
     event.preventDefault();
@@ -22,7 +23,13 @@ export default function SignIn() {
     firebase
       .auth()
       .signInWithEmailAndPassword(emailAddress, password)
-      
+      .then(() => {
+        setEmailAddress("");
+        setPassword("");
+        setError("");
+        navigate.push(ROUTES.BROWSE);
+      })
+      .catch((err) => setError(err.message));
   };
 
   return (
