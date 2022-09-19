@@ -4,7 +4,9 @@ import { Link as ReactRouterLink } from "react-router-dom";
 export const Background = styled.section`
   display: flex;
   flex-direction: column;
-  background: url(${({ src }) => src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"}) top left / cover no-repeat;
+  background: url(${({ src }) =>
+      src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+    top left / cover no-repeat;
 
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
@@ -125,4 +127,37 @@ export const PlayButton = styled.button`
     background: #ff1e1e;
     color: white;
   }
+`;
+
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const SearchIcon = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 16px;
+  }
+`;
+
+export const SearchInput = styled.div`
+  background-color: #44444459;
+  color: white;
+  border: 1px solid white;
+  transition: width 0.5s;
+  height: 30px;
+  font-size: 14px;
+  margin-left: ${({ active }) => (active === true ? "10px" : "0")};
+  padding: ${({ active }) => (active === true ? "0 10px" : "0")};
+  opacity: ${({ active }) => (active === true ? "1" : "0")};
+  width: ${({ active }) => (active === true ? "200px" : "0")};
 `;

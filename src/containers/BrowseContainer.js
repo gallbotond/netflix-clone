@@ -9,6 +9,7 @@ export function BrowseContainer() {
   const [profile, setProfile] = useState({});
   const [category, setCategory] = useState({});
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const user = {
     displayName: "Ken",
@@ -37,6 +38,9 @@ export function BrowseContainer() {
             >
               Films
             </Header.Link>
+          </Header.Group>
+          <Header.Group>
+            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> 
           </Header.Group>
         </Header.Frame>
         <Header.Feature>
