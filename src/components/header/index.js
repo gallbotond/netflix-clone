@@ -21,3 +21,18 @@ Header.Logo = function HeaderLogo({ to, ...restProps }) {
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
   return <ButtonLink {...restProps}>{children}</ButtonLink>;
 };
+
+Header.Feature = function HeaderFeature({ children, ...restProps }) {
+  return <ButtonLink {...restProps}>{children}</ButtonLink>;
+};
+
+
+Header.FeatureCallout = function HeaderFeatureCallout({ children, ...restProps }) {
+  return <ButtonLink {...restProps}>{children}</ButtonLink>;
+};
+
+
+Header.PlayButton = function HeaderButtonLink({ children, ...restProps }) {
+  return <ButtonLink {...restProps}>{children}</ButtonLink>;
+};
+
