@@ -3,6 +3,9 @@ import { useState } from "react";
 import { Form } from "../components";
 import FooterContainer from "../containers/FooterContainer";
 import HeaderContainer from "../containers/HeaderContainer";
+import * as ROUTES from "../constants/routes";
+import { FirebaseContext } from "../context/firebase";
+import { useContext } from "react";
 
 export default function SignIn() {
   const [error, setError] = useState("");
@@ -11,8 +14,15 @@ export default function SignIn() {
 
   const isInvalid = (password === "") | (emailAddress === "");
 
+  const { firebase } = useContext(FirebaseContext);
+
   const handleSignIn = (event) => {
     event.preventDefault();
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      
   };
 
   return (
