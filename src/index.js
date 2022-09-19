@@ -5,7 +5,6 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalStyles } from "./global-styles";
 import { FirebaseContext } from "./context/firebase";
-import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDepGjSU20-NvHD5m3KhCb0Y-wG50qh0bI",
@@ -18,7 +17,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebase = initializeApp(firebaseConfig);
+const firebase = window.firebase.initializeApp(firebaseConfig)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
