@@ -51,12 +51,12 @@ export function BrowseContainer() {
             <Header.Dropdown>
               <Header.Group>
                 <Header.Picture src={user.photoUrl} />
-                <Header.TextLink>{user.displayName}</Header.TextLink>
+                <Header.Link>{user.displayName}</Header.Link>
               </Header.Group>
               <Header.Group>
-                <Header.TextLink onClick={() => firebase.auth().signOut()}>
+                <Header.Link onClick={() => firebase.auth().signOut()}>
                   Sign Out
-                </Header.TextLink>
+                </Header.Link>
               </Header.Group>
             </Header.Dropdown>
           </Header.Group>
@@ -71,9 +71,9 @@ export function BrowseContainer() {
             he projects in a futile attempt to feel like he's part of the world
             around him.
           </Header.Text>
-        </Header.Feature>
 
-        <Header.PlayButton>Play</Header.PlayButton>
+          <Header.PlayButton>Play</Header.PlayButton>
+        </Header.Feature>
       </Header>
       <FooterContainer />
     </>
