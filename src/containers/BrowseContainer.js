@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { Header } from "../components";
 import FooterContainer from "./FooterContainer";
 import ProfilesContainer from "./ProfilesContainer";
 import * as ROUTES from "../constants/routes";
+import { FirebaseContext } from "../context/firebase";
 
 export function BrowseContainer() {
   const [profile, setProfile] = useState({});
   const [category, setCategory] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const { firebase } = useContext(FirebaseContext);
 
   const user = {
     displayName: "Ken",
@@ -40,9 +43,25 @@ export function BrowseContainer() {
             </Header.Link>
           </Header.Group>
           <Header.Group>
-            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> 
+            <Header.Search
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+            />
+            <Header.Picture src={user.photoUrl} />
+            <Header.Dropdown>
+              <Header.Group>
+                <Header.Picture src={user.photoUrl} />
+                <Header.TextLink>{user.displayName}</Header.TextLink>
+              </Header.Group>
+              <Header.Group>
+                <Header.TextLink onClick={() => firebase.auth().signOut()}>
+                  Sign Out
+                </Header.TextLink>
+              </Header.Group>
+            </Header.Dropdown>
           </Header.Group>
         </Header.Frame>
+
         <Header.Feature>
           <Header.FeatureCallout>Watch Joker Now</Header.FeatureCallout>
           <Header.Text>
@@ -53,6 +72,7 @@ export function BrowseContainer() {
             around him.
           </Header.Text>
         </Header.Feature>
+
         <Header.PlayButton>Play</Header.PlayButton>
       </Header>
       <FooterContainer />
