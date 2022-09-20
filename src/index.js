@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalStyles } from "./global-styles";
 import { FirebaseContext } from "./context/firebase";
+import { seedDatabase } from "./seed";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDepGjSU20-NvHD5m3KhCb0Y-wG50qh0bI",
@@ -17,9 +18,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebase = window.firebase.initializeApp(firebaseConfig)
+const firebase = window.firebase.initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+seedDatabase(firebase);
 
 root.render(
   <React.StrictMode>
