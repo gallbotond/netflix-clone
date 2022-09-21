@@ -22,7 +22,8 @@ const firebase = window.firebase.initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-seedDatabase(firebase);
+// DO NOT UNCOMMENT !!!
+// seedDatabase(firebase);
 
 root.render(
   <React.StrictMode>
