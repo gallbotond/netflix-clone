@@ -149,7 +149,7 @@ export const SearchIcon = styled.button`
   }
 `;
 
-export const SearchInput = styled.div`
+export const SearchInput = styled.input`
   background-color: #44444459;
   color: white;
   border: 1px solid white;

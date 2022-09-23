@@ -31,7 +31,7 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) =>
     flexDirection === "row" ? "row" : "column"};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
-  ${({ margin, alignItems }) => margin && `margin: ${alignItems}`}
+  ${({ margin }) => margin && `margin: ${margin}`};
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -44,6 +44,7 @@ export const Subtitle = styled.p`
   font-size: 12px;
   color: white;
   font-weight: bold;
+  margin-top: 0;
   margin-bottom: 0;
   user-select: none;
   display: none;
@@ -95,7 +96,7 @@ export const Item = styled.div`
     z-index: 99;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     &:hover ${Meta}, &:hover ${Text}, &:hover ${Subtitle} {
       display: block;
       z-index: 100;
@@ -134,7 +135,7 @@ export const FeatureText = styled.p`
 export const Feature = styled.div`
   display: flex;
   flex-direction: row;
-  background: url(${({src}) => src});
+  background: url(${({ src }) => src});
   background-size: contain;
   position: relative;
   height: 360px;
@@ -176,7 +177,7 @@ export const FeatureClose = styled.button`
   }
 `;
 
-export const Content = styled.p`
+export const Content = styled.div`
   margin: 56px;
   max-width: 500px;
   line-height: normal;
@@ -188,14 +189,14 @@ export const Content = styled.p`
 `;
 
 export const Maturity = styled.div`
-  background-color: ${({rating}) => (rating => 15 ? 'red' : 'green')};
+  background-color: ${({ rating }) => (rating >= 15 ? "red" : "green")};
   border-radius: 15px;
   width: 20px;
   padding: 5px;
   text-align: center;
   color: white;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
   font-size: 12px;
 `;
