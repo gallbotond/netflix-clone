@@ -34,10 +34,12 @@ export function BrowseContainer({ slides }) {
   }, [slides, category]);
 
   useEffect(() => {
-    const fuse = new Fuse(slides, {
+    const fuse = new Fuse(slideRows, {
       keys: ["data.description", "data.title", "data.genre"],
     });
     const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    // console.log(fuse);
 
     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
       setSlideRows(results);
