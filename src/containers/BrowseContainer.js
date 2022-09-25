@@ -7,6 +7,7 @@ import * as ROUTES from "../constants/routes";
 import { FirebaseContext } from "../context/firebase";
 import Loading from "../components/loading";
 import Card from "../components/card";
+import Player from "../components/player";
 import Fuse from "fuse.js";
 
 export function BrowseContainer({ slides }) {
