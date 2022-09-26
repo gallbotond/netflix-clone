@@ -10,15 +10,37 @@ function App() {
   return (
     <Routes>
       <Route
-        user={user}
-        loggedInPath={ROUTES.BROWSE}
         path={ROUTES.HOME}
         element={
-          <IsUserRedirect>
+          <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE}>
             <Home />
           </IsUserRedirect>
         }
-      ></Route>
+      />
+      <Route
+        path={ROUTES.SIGN_IN}
+        element={
+          <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE}>
+            <SignIn />
+          </IsUserRedirect>
+        }
+      />
+      <Route
+        path={ROUTES.SIGN_UP}
+        element={
+          <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE}>
+            <SignUp />
+          </IsUserRedirect>
+        }
+      />
+      <Route
+        path={ROUTES.BROWSE}
+        element={
+          <ProtectedRoute user={user}>
+            <Browse />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
