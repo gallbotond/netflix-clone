@@ -48,7 +48,7 @@ export default function SignUp() {
         <Form>
           <Form.Title>Sign Up</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
-          <Form.Base>
+          <Form.Base onSubmit={handleSignUp} method="POST">
             <Form.Input
               placeholder="First Name"
               autoComplete="name"
